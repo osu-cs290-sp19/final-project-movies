@@ -15,6 +15,7 @@ PLAN
     b. release date
     c. summary
     d. list of starring actors/actresses
+    e. have a genre 
   3. they are each articles.. much like twits.  that way they can be easily manipulated with style.css
   4. you can add your own movies
   5. when you click on an actors name.. it should link to a google search of their name
