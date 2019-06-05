@@ -27,6 +27,7 @@ a:hover {
   font-size: 22px;
   background-color: #fff;
   margin: 5px;
+  padding-left: 0;
 }
 
 .navitem {
@@ -36,7 +37,6 @@ a:hover {
 
 .navitem:hover {
   background-color: #00c1ea;
-  border: 3px #ee3232;
 }
 
 .navitem a {
