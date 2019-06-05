@@ -23,7 +23,7 @@ function handleNewWordsEntered(text, author) {
 }
 
 function checkFields() {
-
+  var word = allWords[currentWord];
 }
 
 function wordSearched(){
