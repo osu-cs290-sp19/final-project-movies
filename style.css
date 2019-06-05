@@ -36,6 +36,7 @@ a:hover {
 
 .navitem:hover {
   background-color: #00c1ea;
+  border: 3px #ee3232;
 }
 
 .navitem a {
