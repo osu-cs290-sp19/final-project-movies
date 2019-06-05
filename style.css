@@ -21,13 +21,16 @@ a:hover {
 .site-title {
   margin: 0;
   padding: 10px;
+  color: white;
 }
 
 .navbar {
   font-size: 22px;
-  background-color: #fff;
-  margin: 5px;
+  background-color: lightGrey;
+  margin: 5px solid lightGrey;
   padding-left: 0;
+  padding-top: 5px;
+  margin-top: 0px;
 }
 
 .navitem {
