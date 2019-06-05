@@ -31,6 +31,7 @@ a:hover {
   padding-left: 0;
   padding-top: 5px;
   margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 .navitem {
@@ -52,10 +53,19 @@ a:hover {
   float: right;
 }
 
+
 .genre-container {
+
   display: flex;
+  float: left;
   flex-wrap: wrap;
   padding: 5px;
+
+  /*big black line*/
+  border-right: solid 5px;
+  background-color: white;
+  border-color: lightGrey;
+
 }
 
 .error-page {
