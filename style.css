@@ -20,16 +20,18 @@ a:hover {
 
 .site-title {
   margin: 0;
-  padding: 20px;
+  padding: 10px;
 }
 
 .navbar {
   font-size: 22px;
   background-color: #fff;
+  margin: 5px;
 }
 
 .navitem {
   display: inline-block;
+  color: #ee3232;
 }
 
 .navitem:hover {
@@ -42,7 +44,7 @@ a:hover {
   padding: 10px 20px;
 }
 
-.navitem.reight {
+.navitem.right {
   float: right;
 }
 
