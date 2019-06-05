@@ -27,11 +27,11 @@ a:hover {
 .navbar {
   font-size: 22px;
   background-color: lightGrey;
-  margin: 5px solid lightGrey;
+
   padding-left: 0;
   padding-top: 5px;
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 100px;
 }
 
 .navitem {
@@ -44,7 +44,6 @@ a:hover {
 }
 
 .navitem a {
-  displau: inline-block;
   color: #454545;
   padding: 10px 20px;
 }
@@ -59,13 +58,26 @@ a:hover {
   display: flex;
   float: left;
   flex-wrap: wrap;
-  padding: 5px;
+  padding: 10px;
 
   /*big black line*/
   border-right: solid 5px;
   background-color: white;
   border-color: lightGrey;
 
+}
+
+.post{
+  margin-left: 10px;
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  padding: 10px;
+
+  /*big black line*/
+  border: solid 5px;
+  background-color: white;
+  border-color: lightGrey;
 }
 
 .error-page {
