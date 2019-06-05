@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-  color: #ddea00
+  color: yellow;
 }
 
 .site-title {
@@ -40,7 +40,7 @@ a:hover {
 }
 
 .navitem:hover {
-  background-color: #00c1ea;
+  background-color: yellow;
 }
 
 .navitem a {
@@ -52,7 +52,6 @@ a:hover {
   float: right;
 }
 
-
 .genre-container {
 
   display: flex;
@@ -62,7 +61,7 @@ a:hover {
 
   /*big black line*/
   border-right: solid 5px;
-  background-color: white;
+  background-color: lightGrey;
   border-color: lightGrey;
 
 }
