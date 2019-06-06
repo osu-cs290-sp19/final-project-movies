@@ -2,7 +2,9 @@ var modal = document.getElementById('create-twit-modal');
 
 var background = document.getElementById('modal-backdrop');
 
-var btn = document.getElementById('create-twit-button');
+var createModal = document.getElementById('create-post-modal');
+
+var btn = document.getElementById('add-post-button');
 
 var close = document.getElementsByClassName('modal-close-button')[0];
 
@@ -13,6 +15,13 @@ var contribute = document.getElementsByClassName('modal-accept-button');
 var input = document.getElementsByClassName('post-input-element');
 
 var post = document.getElementsByClassName('post')[0];
+
+btn.addEventListener('click', function(event) {
+  modal.style.display = "block";
+  background.style.display = "none";
+  background.removeClass("hidden");
+  createModal.removeClass("hidden");
+});
 
 function handleNewWordsEntered(text, author) {
   allWords = text.replace(/[!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~]/g, '')
@@ -25,7 +34,7 @@ function handleNewWordsEntered(text, author) {
 function checkFields(text, author) {
   var word = allWords[currentWord];
   if(!text || !author){
-    alert("If you want to participate you have to follow the rulez. You must have something to say and sign that stuff")
+    alert("If you want to participate you have to follow the rulez. You must have something to say and sign that s***")
       document.getElementById('post-text-input').value = "";
       document.getElementById('post-attribution-input').value = "";
   }
@@ -88,10 +97,7 @@ function createTwit() {
   main[0].appendChild(createArticle);
 });
 
-btn.addEventListener('click', function(event) {
-  modal.style.display = "block";
-  background.style.display = "none";
-});
+
 
 close.addEventListener('click', function(event) {
   modal.style.display = "none";
