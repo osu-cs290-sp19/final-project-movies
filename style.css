@@ -29,9 +29,10 @@ a:hover {
   background-color: lightGrey;
 
   padding-left: 0;
-  padding-top: 5px;
-  margin-top: 0px;
-  margin-bottom: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 100px white;
+  margin-top: 0;
 }
 
 .navitem {
@@ -39,6 +40,9 @@ a:hover {
   color: #ee3232;
 }
 
+.navitem.navbar-search:hover {
+  background-color: lightGrey;
+}
 .navitem:hover {
   background-color: yellow;
 }
@@ -52,18 +56,64 @@ a:hover {
   float: right;
 }
 
-.genre-container {
+.navbar-search {
+  float: right;
+  margin-right: 20px;
+  padding: 0;
+  line-height: 5px;
+}
 
+#navbar-search-input {
+  padding: 3.6px;
+  font-size: 16px;
+  background-color: #eee;
+  border: 0;
+  border-radius: 2px;
+}
+
+#navbar-search-input:focus {
+  outline: none;
+  background: #fff;
+}
+
+#navbar-search-button {
+  margin-left: -5px;
+  font-size: 16px;
+  background: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px black;
+  color: #343434;
+  cursor: pointer;
+}
+
+#navbar-search-button:hover {
+  color: #319df6;
+}
+
+#navbar-search-button:focus {
+  color: #319df6;
+  outline: none;
+}
+
+.genre-container {
   display: flex;
   float: left;
   flex-wrap: wrap;
   padding: 10px;
 
   /*big black line*/
-  border-right: solid 5px;
+  border: 10px solid;
   background-color: lightGrey;
-  border-color: lightGrey;
+  border-color: white;
+}
 
+ul {
+  list-style-image:url('https://i3.wp.com/popcornfabrik.de/wp-content/uploads/2016/12/popcorn-icon.png');
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
 }
 
 .post{
