@@ -39,7 +39,7 @@ function wordSearched(searching){
   var mainValue = document.getElementsByClassName('post-container')[0];
   var articles = mainValue.getElementsByClassName('post');
 
-  for(i=0; i < artciles.length; i++){
+  for(i=0; i < articles.length; i++){
     var text = articles[i].getElementsByClassName('post-text')[0].textContent;
     var url = articles[i].getElementsByClassName('post-url')[0].textContent;
     var author = articles[i].getElementsByClassName('post-author')[0].textContent;
@@ -52,7 +52,7 @@ function wordSearched(searching){
     }
     else{
       mainValue.removeChild(articles[i]);
-      wordSearched(searching)
+      wordSearched(searching);
     }
   }
 }
@@ -72,7 +72,7 @@ function createTwit() {
   var newPOne = document.createElement("p");
   newDivTwo.appendChild(newPOne);
   newPOne.setAttribute('class', post-text);
-  newPone.textContent = text;
+  newPOne.textContent = text;
 
   var newPTwo = document.createElement("p");
   newDivTwo.appendChild(newPTwo);
@@ -135,4 +135,3 @@ searchBar.addEventListener('change', function(event){
 	console.log(searching);
 	wordSearched(searching);
 });
-© 2019 GitHub, Inc.
