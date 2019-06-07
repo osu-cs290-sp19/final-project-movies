@@ -72,7 +72,7 @@ acceptButton[0].addEventListener("click", function(event){
   }
 
   //make sure that the input fields are cleared.
-  insertAuthor.value = "";
+  attributionText.value = "";
   insertText.value = "";
   urlInput.value = "";
 
@@ -87,22 +87,34 @@ function createNewPost(attributionText, insertText, urlInput){
   modalBackground.classList.add('hidden');
 
   //CONTAINER IMPLEMENTATION
-  var postContainer = document.getElementsByClassName('Western-page')[0];
+  var postContainer = document.getElementsByClassName('post-container')[0];
 
   //create article and twit
   var newPost = document.createElement('article');
   newPost.classList.add('post');
-  debugger;
+
   postContainer.appendChild(newPost);
 
   //BULLHORN ICON IMPLEMENTATION
   var newIcon = document.createElement('div');
   var film = document.createElement('i');
   newIcon.classList.add('post-icon');
-  film.classList.add('fas fa-film');
-
+  film.classList.add('fas');
+  film.classList.add('fa-film');
   newIcon.appendChild(film);
   newPost.appendChild(newIcon);
+
+  var starHtml = '<div class="stars" data-rating=" ">'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '</div>'
+
+  var stars = newPost.insertAdjacentHTML('beforeend', starHtml)
+
+
 
   //create the content
   var newContent = document.createElement('div');
@@ -119,16 +131,21 @@ function createNewPost(attributionText, insertText, urlInput){
   //append this as a appendChild
   newContent.appendChild(newText);
 
+
   var newURL = document.createElement('p');
   newURL.classList.add('post-url');
   newPost.appendChild(newURL);
 
   var urlText = document.createElement('a');
-  urlText.textContent = urlInput.value
-  newURL = appendChild(urlText);
+
+  urlText.textContent = newURL.value;
+  newURL.appendChild(urlText);
 
   //append this as a appendChild
   newContent.appendChild(newURL);
+
+
+
 
   //AUTHOR TEXT IMPLEMENTATION
   var newAuth = document.createElement('p');
@@ -140,7 +157,7 @@ function createNewPost(attributionText, insertText, urlInput){
   authorText.textContent = attributionText.value;
   newAuth.appendChild(authorText);
 
-  newContent.appendChild('newAuth');
+  newContent.appendChild(newAuth);
 
 }
 
