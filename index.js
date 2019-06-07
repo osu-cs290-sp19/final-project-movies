@@ -50,11 +50,83 @@ xButton[0].addEventListener("click", function(event){
   urlInput.value = "";
 })
 
+
+
 /*************************************************************/
 /*step 3: accept button working, place movie in container.****/
 /*make sure all required fields have input********************/
 /*************************************************************/
 
+var acceptButton = document.getElementsByClassName('modal-accept-button');
+acceptButton[0].addEventListener("click", function(event){
+  console.log("the accept button was clicked", event.target);
+
+  //BOTH of the fields have to have input
+  if(attributionText.value.length == 0 || insertText.value.length == 0){
+
+    //have an error message come up on the screen
+    alert("You have an empty field.  Please try again!");
+  }
+  else{
+    createNewPost(attributionText, insertText);
+  }
+
+  //make sure that the input fields are cleared.
+  insertAuthor.value = "";
+  insertText.value = "";
+
+})
+
+//NEW TWIT IMPLEMENTATION
+function createNewPost(attributionText, insertText){
+  modal.classList.add('hidden');
+  modalBackground.classList.add('hidden');
+
+  //CONTAINER IMPLEMENTATION
+  var twitContainer = document.getElementsByClassName('twit-container')[0];
+
+  //create article and twit
+  var newPost = document.createElement('article');
+  newPost.classList.add('post');
+
+  twitContainer.appendChild(newT);
+
+  //BULLHORN ICON IMPLEMENTATION
+  var newIcon = document.createElement('div');
+  var film = document.createElement('i');
+  newIcon.classList.add('post-icon');
+  film.classList.add('fas');
+  film.classList.add('fa-film');
+
+  newIcon.appendChild(film);
+  newPost.appendChild(newIcon);
+
+  //create the content
+  var newContent = document.createElement('div');
+  newContent.classList.add('post-content');
+
+  //append this as a appendChild
+  newPost.appendChild(newContent);
+
+  //CONTENT TEXT IMPLEMENTATION
+  var newText = document.createElement('p');
+  newText.classList.add('post-text');
+  newText.textContent = insertText.value;
+
+  //append this as a appendChild
+  newContent.appendChild(newText);
+
+  //AUTHOR TEXT IMPLEMENTATION
+  var newAuth = document.createElement('p');
+  newAuth.classList.add('post-author');
+  newPost.appendChild(newAuth);
+
+  var authorText = document.createElement('a');
+  //authorText.href = "#";
+  authorText.textContent = insertAuthor.value;
+  newAuth.appendChild(authorText);
+
+}
 
 /*var modal = document.getElementById('create-twit-modal');
 
@@ -75,14 +147,9 @@ var input = document.getElementsByClassName('post-input-element');
 var post = document.getElementsByClassName('post')[0];
 */
 
-/*btn.addEventListener('click', function(event) {
-  modal.style.display = "block";
-  background.style.display = "none";
-  background.removeClass("hidden");
-  createModal.removeClass("hidden");
-});
 
-function handleNewWordsEntered(text, author) {
+
+/*function handleNewWordsEntered(text, author) {
   allWords = text.replace(/[!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~]/g, '')
     .toLowerCase().split(' ');
 		allWords = author.replace(/[!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~]/g, '')
