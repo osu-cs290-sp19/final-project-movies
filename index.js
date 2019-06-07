@@ -68,35 +68,38 @@ acceptButton[0].addEventListener("click", function(event){
     alert("You have an empty field.  Please try again!");
   }
   else{
-    createNewPost(attributionText, insertText);
+    createNewPost(attributionText, insertText, urlInput);
   }
 
   //make sure that the input fields are cleared.
   insertAuthor.value = "";
   insertText.value = "";
+  urlInput.value = "";
 
 })
 
-//NEW TWIT IMPLEMENTATION
-function createNewPost(attributionText, insertText){
+
+//NEW POST IMPLEMENTATION
+function createNewPost(attributionText, insertText, urlInput){
+
+  //make sure it's hidden again
   modal.classList.add('hidden');
   modalBackground.classList.add('hidden');
 
   //CONTAINER IMPLEMENTATION
-  var twitContainer = document.getElementsByClassName('twit-container')[0];
+  var postContainer = document.getElementsByClassName('Western-page')[0];
 
   //create article and twit
   var newPost = document.createElement('article');
   newPost.classList.add('post');
-
-  twitContainer.appendChild(newT);
+  debugger;
+  postContainer.appendChild(newPost);
 
   //BULLHORN ICON IMPLEMENTATION
   var newIcon = document.createElement('div');
   var film = document.createElement('i');
   newIcon.classList.add('post-icon');
-  film.classList.add('fas');
-  film.classList.add('fa-film');
+  film.classList.add('fas fa-film');
 
   newIcon.appendChild(film);
   newPost.appendChild(newIcon);
@@ -116,6 +119,17 @@ function createNewPost(attributionText, insertText){
   //append this as a appendChild
   newContent.appendChild(newText);
 
+  var newURL = document.createElement('p');
+  newURL.classList.add('post-url');
+  newPost.appendChild(newURL);
+
+  var urlText = document.createElement('a');
+  urlText.textContent = urlInput.value
+  newURL = appendChild(urlText);
+
+  //append this as a appendChild
+  newContent.appendChild(newURL);
+
   //AUTHOR TEXT IMPLEMENTATION
   var newAuth = document.createElement('p');
   newAuth.classList.add('post-author');
@@ -123,8 +137,10 @@ function createNewPost(attributionText, insertText){
 
   var authorText = document.createElement('a');
   //authorText.href = "#";
-  authorText.textContent = insertAuthor.value;
+  authorText.textContent = attributionText.value;
   newAuth.appendChild(authorText);
+
+  newContent.appendChild('newAuth');
 
 }
 
