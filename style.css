@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-  color: yellow;
+  color: #ede328;
 }
 
 .site-title {
@@ -44,7 +44,7 @@ a:hover {
   background-color: lightGrey;
 }
 .navitem:hover {
-  background-color: yellow;
+  background-color: #ede328;
 }
 
 .navitem a {
@@ -169,6 +169,7 @@ ul {
   width: 66px;
   border-radius: 33px;
   font-size: 36px;
+  background-color: #ede328;
 }
 
 #add-post-button {
