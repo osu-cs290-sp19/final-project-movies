@@ -130,6 +130,7 @@ article.go-container{
   flex-direction: column;
   border: 5px solid;
   border-color: black;
+  height: 450px;
 }
 
 div.dice{
@@ -150,7 +151,7 @@ button {
   height: 100px;
   width: 100px;
   padding: 50px;
-  margin: 50px auto;
+  margin: 20px auto;
   border: 1px solid gray;
   border-radius: 10px;
   font-size:80px;
@@ -163,6 +164,7 @@ button {
   border-style: solid;
   border-width: thin;
   border-radius: 6px;
+  text-align: center;
 }
 
 .genre-container {
@@ -174,7 +176,7 @@ button {
   border: 10px solid;
   border-color: black;
   border-color: white;
-  /*height: 800px;*/
+  height: 450px;
 }
 
 

@@ -210,6 +210,25 @@ var dice = {
 function printNumber(number) {
   var placeholder = document.getElementById('placeholder');
   placeholder.innerHTML = number;
+  var genreOutput = document.getElementById('genre-output-placeholder');
+  if(number == '1'){
+    genreOutput.innerHTML = 'Action & Adventure';
+  }
+  else if(number == '2'){
+    genreOutput.innerHTML = 'Animated & Remakes';
+  }
+  else if(number == '3'){
+    genreOutput.innerHTML = 'Horror';
+  }
+  else if(number == '4'){
+    genreOutput.innerHTML = 'Romance & RomCom';
+  }
+  else if(number == '5'){
+    genreOutput.innerHTML = 'Superhero';
+  }
+  else if(number == '6'){
+    genreOutput.innerHTML = 'Western';
+  }
 }
 
 var button = document.getElementById('button');
