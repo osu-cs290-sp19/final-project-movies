@@ -65,7 +65,7 @@ acceptButton[0].addEventListener("click", function(event){
   if(attributionText.value.length == 0 || insertText.value.length == 0){
 
     //have an error message come up on the screen
-    alert("You have an empty field.  Please try again!");
+    alert("If you have nothing to say then don't try to say something! If you want to say something then sign that s***!");
   }
   else{
     createNewPost(attributionText, insertText, urlInput);
@@ -89,13 +89,11 @@ function createNewPost(attributionText, insertText, urlInput){
   //CONTAINER IMPLEMENTATION
   var postContainer = document.getElementsByClassName('post-container')[0];
 
-  //create article and twit
   var newPost = document.createElement('article');
   newPost.classList.add('post');
 
   postContainer.appendChild(newPost);
 
-  //BULLHORN ICON IMPLEMENTATION
   var newIcon = document.createElement('div');
   var film = document.createElement('i');
   newIcon.classList.add('post-icon');
@@ -113,8 +111,6 @@ function createNewPost(attributionText, insertText, urlInput){
   '</div>'
 
   var stars = newPost.insertAdjacentHTML('beforeend', starHtml)
-
-
 
   //create the content
   var newContent = document.createElement('div');
@@ -161,7 +157,10 @@ function createNewPost(attributionText, insertText, urlInput){
 
 }
 
-//initial setup
+
+/********************************************/
+/*Rating system*/
+/********************************************/
 document.addEventListener('DOMContentLoaded', function(){
   addListeners();
   setRating(); //based on value inside the div
@@ -194,6 +193,10 @@ function setRating(){
   });
 }
 
+
+/************************************/
+/*Dice roll*/
+/************************************/
 var dice = {
   sides: 6,
   roll: function () {
