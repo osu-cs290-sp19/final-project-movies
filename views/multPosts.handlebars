@@ -1,0 +1,11 @@
+<main class = "post-container">
+
+  {{#each posts}}
+    {{> singlePost}}
+  {{/each}}
+
+</main>
+
+{{#if dispMod }}
+  {{> modal}}
+{{/if}}
