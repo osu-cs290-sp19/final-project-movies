@@ -187,13 +187,10 @@ div.actors{
   float: left;
   height: 350px;
   width: 270px;
-  margin: 4px;
-
+  margin: 7px;
+  padding-top: 50px;
 }
 
-.actors h3{
-  position: absolute;
-}
 
 .genre-container {
   display: flex;
