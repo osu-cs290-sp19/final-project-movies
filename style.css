@@ -167,6 +167,34 @@ button {
   text-align: center;
 }
 
+/********best actors catgory********/
+.actors {
+  display: flex;
+  float: right;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: white;
+  border: 5px solid;
+  border-color: black;
+  height: 450px;
+}
+
+div.actors{
+  margin: 10px;
+}
+
+.actors img{
+  float: left;
+  height: 350px;
+  width: 270px;
+  margin: 4px;
+
+}
+
+.actors h3{
+  position: absolute;
+}
+
 .genre-container {
   display: flex;
   float: left;
@@ -183,6 +211,10 @@ button {
 article.genre-container {
   margin: 10px;
   border: 5px solid black;
+}
+
+.cost-content img{
+  float: right;
 }
 
 /*ul {
