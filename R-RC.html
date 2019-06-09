@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <!---Relavent links and files to get page running--->
       <meta charset="uft-8">
       <title>Movie Mania</title>
       <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/icon/film" media="screen">
@@ -20,20 +21,19 @@
             <li class="navitem"><a href="/">Home</a></li>
             <li class="navitem"><a href="/Best">Best</a></li>
             <li class="navitem"><a href="/Recommended">Recommended</a></li>
-            <li class="navitem navbar-search">
-            <input type="text" id="navbar-search-input" placeholder="Search...">
-            <button type="button" id="navbar-search-button"><i class="fas fa-eye"></i></button>
           </ul>
         </nav>
 
         <main class="post-container">
           <article class="RRC-container">
                 <div class="RRC-content">
+                  <!---Genre title--->
                   <h3>Romance and Romantic Comedies</h3>
                 </div>
             </article>
           </main>
 
+          <!---These are the posts that will show up on the page--->
           <article class="post">
             <div class="post-icon">
               <i class="fas fa-film"></i>
@@ -47,6 +47,8 @@
               she decides to hire Fred as her speechwriter and something unexpected insues.</p>
               <p class="post-url"><a href="https://www.imdb.com/title/tt2139881/">Long Shot's IMDB</a></p>
               <p class="post-author"><a href="#">NQ</a></p>
+
+              <!---This is the rating system/stars that show up in the bottom of every post box--->
               <div class="stars" data-rating=" ">
                 <span class="star">&nbsp;</span>
                 <span class="star">&nbsp;</span>
@@ -56,7 +58,8 @@
               </div>
             </div>
           </article>
-
+          
+          <!---Model button to add a temporary post--->
           <button type="button" id="add-post-button"><i class="fas fa-film"></i></button>
           <div id="modal-backdrop" class="hidden"></div>
               <div id="create-post-modal" class="hidden">

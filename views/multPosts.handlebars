@@ -1,11 +1,11 @@
+<!---Will cycle through and create multiple posts on a page if there are multiple posts that need to be made--->
 <main class = "post-container">
-
   {{#each posts}}
     {{> singlePost}}
   {{/each}}
-
 </main>
 
+<!---This will only display the modle on pages we want the modle displayed on--->
 {{#if dispMod }}
   {{> modal}}
 {{/if}}
