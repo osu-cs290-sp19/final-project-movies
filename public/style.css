@@ -222,17 +222,20 @@ article.genre-container {
 }*/
 
 .post{
-  margin-left: 10px;
   display: flex;
   float: left;
   flex-wrap: wrap;
   padding: 10px;
-
+  width: 500px;
+  min-height: 400px;
   /*big black line*/
-  border: solid 2px;
+  border: solid 5px;
   background-color: white;
   /*border-color: black;*/
+  margin: 10px;
 }
+
+
 
 .error-page {
   text-align: center;
