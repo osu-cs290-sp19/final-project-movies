@@ -4,10 +4,45 @@
  * names: Margaret Walters & Nora Quick
  */
 
+var path = require('path');
+var express = require('express');
+var exphandle = require('express-handlebars');
 
- var fs = require('fs');
+var postdata = require('./postData');
+
+var app = exress();
+var port = process.env.PORT || 3305;
+
+app.engine('handlebars', exphandle({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+app.use(express.static('public'));
+
+app.get('/', function (req, res, next){
+  res.status(200).render('multPosts', {post:postData, dispMod:false});
+});
+
+app.get('/posts/:genre', function(req, res, next){
+  if(postData[req.params.genre]){
+    res.status(200).render('multPosts', {post:[postData[req.params.genre]], desplayMod: true});
+  } else {
+    res.status(404).render('404');
+  }
+});
+
+app.get('*', function (req, res, next){
+  res.status(404).render('404');
+});
+
+app.listen(port, function (){
+  consol.log("== Server is listening to port", port);
+});
+
+
+
+
+ /*var fs = require('fs');
  var http = require('http');
-
 
  var mainIndexData = fs.readFileSync('public/mainIndex.html');
  console.log("mainIndex.html has been read...");
@@ -87,9 +122,7 @@
  var server = http.createServer(requestHandler);
  server.listen(port, function() {
    console.log('== Server is listening to a port');
- });
-
-
+ });*/
 
 
 //make all of the variables that are needed
