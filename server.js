@@ -56,6 +56,24 @@
    else if(req.url == '/index.js'){
      res.write(indexJsData);
    }
+   else if(req.url == '/A-A.html'){
+     res.write(dataAA);
+   }
+   else if(req.url == '/A-R.html'){
+     res.write(dataAR);
+   }
+   else if(req.url == '/Horror.html'){
+     res.write(dataHorror);
+   }
+   else if(req.url == '/SuperHero.html'){
+     res.write(dataSuperHero);
+   }
+   else if(req.url == '/Western.html'){
+     res.write(dataWestern);
+   }
+   else if(req.url == '/R-RC.html'){
+     res.write(dataRRC);
+   }
    else if(req.url == '/404.html'){
      res.write(data404);
    }
