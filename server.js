@@ -31,7 +31,8 @@ var dataSuperHero = fs.readFileSync('public/SuperHero.html');
 console.log("SuperHero has been read:)");
 var dataWestern = fs.readFileSync('public/Western.html');
 console.log("Western has been read:)");
-
+var dataRRC = fs.readFileSync('public/R-RC.html');
+console.log("R-RC has been read:)");
 
 //FUNCTION REQUEST HANDLER
 function requestHandler(req, res){
@@ -91,7 +92,7 @@ function requestHandler(req, res){
           res.statusCode = 200;
           res.write(dataSuperHero);
         }
-        //if they want AA
+        //if they want Western
         else if(req.url === '/Western.html'){
           //header must be wet for html files
           res.setHeader("Content-Type", "text/html");
@@ -99,6 +100,15 @@ function requestHandler(req, res){
           console.log("They typed /Western.html");
           res.statusCode = 200;
           res.write(dataWestern);
+        }
+        //if they want R-RC
+        else if(req.url === '/R-RC.html'){
+          //header must be wet for html files
+          res.setHeader("Content-Type", "text/html");
+
+          console.log("They typed /R-RC.html");
+          res.statusCode = 200;
+          res.write(dataRRC);
         }
         //if they want to get the style.css
         else if(req.url === '/style.css'){
