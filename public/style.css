@@ -120,18 +120,6 @@ article.go-container{
   float: left;
 }
 
-.cost-content img{
-  height: 100px;
-  width: 200px;
-}
-
-.cost-content img:hover{
-  height: 100px;
-  width: 200px;
-  border-style: solid;
-  border-color: black;
-}
-
 .dice {
   display: flex;
   flex-wrap: wrap;
