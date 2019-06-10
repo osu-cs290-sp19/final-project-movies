@@ -5,15 +5,83 @@
  */
 
 
+ var fs = require('fs');
+ var http = require('http');
+
+
+ var mainIndexData = fs.readFileSync('public/mainIndex.html');
+ console.log("mainIndex.html has been read...");
+
+ var indexJsData = fs.readFileSync('public/index.js');
+ console.log("index.js has been read...");
+
+ var styleData = fs.readFileSync('public/style.css');
+ console.log("style has been read...");
+
+ var data404 = fs.readFileSync('public/404.html');
+ console.log("404 has been read...");
+
+ var dataAA = fs.readFileSync('public/A-A.html');
+ console.log("A-A has been read...");
+
+ var dataAR = fs.readFileSync('public/A-R.html');
+ console.log("A-R has been read...");
+
+ var dataHorror = fs.readFileSync('public/Horror.html');
+ console.log("Horror has been read...");
+
+ var dataSuperHero = fs.readFileSync('public/SuperHero.html');
+ console.log("SuperHero has been read...");
+
+ var dataWestern = fs.readFileSync('public/Western.html');
+ console.log("Western has been read...");
+
+ var dataRRC = fs.readFileSync('public/R-RC.html');
+ console.log("R-RC has been read...");
+
+
+ var port = process.env.PORT || 3305;
+
+ function requestHandler(req, res) {
+   console.log("Checking which file to write.");
+
+   res.statusCode = 200;
+
+   if(req.url == '/mainIndex.html' || req.url == '/'){
+     res.write(mainIndexData);
+   }
+   else if(req.url == '/style.css'){
+     res.write(styleData);
+   }
+   else if(req.url == '/index.js'){
+     res.write(indexJsData);
+   }
+   else if(req.url == '/404.html'){
+     res.write(data404);
+   }
+   else{
+     res.write(data404);
+   }
+   res.end();
+ }
+
+
+ var server = http.createServer(requestHandler);
+ server.listen(port, function() {
+   console.log('== Server is listening to a port');
+ });
+
+
+
 
 //make all of the variables that are needed
-var url = require('url');
+/*var url = require('url');
 var fs = require('fs');
-var http = require('http');
+var http = require('http');*/
 
 
 //PRINT OUT EACH TIME (ONLY ONCE FOR EACH) THAT I USE READFILESYNC FOR FILES
-var mainIndexdata = fs.readFileSync('public/mainIndex.html');
+/*var mainIndexdata = fs.readFileSync('public/mainIndex.html');
 console.log("mainIndex.html has been read:))");
 var indexjsdata = fs.readFileSync('public/index.js');
 console.log("index.js has been read:)");
@@ -32,10 +100,10 @@ console.log("SuperHero has been read:)");
 var dataWestern = fs.readFileSync('public/Western.html');
 console.log("Western has been read:)");
 var dataRRC = fs.readFileSync('public/R-RC.html');
-console.log("R-RC has been read:)");
+console.log("R-RC has been read:)");*/
 
 //FUNCTION REQUEST HANDLER
-function requestHandler(req, res){
+/*function requestHandler(req, res){
   console.log("Inside of requestHandler!");
   var styledata = fs.readFileSync('public/style.css');
         //default circumstance for just '/ leads to index.html
@@ -147,12 +215,12 @@ function requestHandler(req, res){
           res.write(data404);
         }
         res.end();
-}
+}*/
 //make server variable
-var server = http.createServer(requestHandler);
+/*var server = http.createServer(requestHandler);
 process.env.PORT = 3305;
 var port = process.env.PORT;
 
 server.listen(port, function() {
   console.log("Server 3305 is listening");
-});
+});*/
