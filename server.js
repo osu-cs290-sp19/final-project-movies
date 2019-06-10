@@ -19,7 +19,7 @@
  app.use(express.static('public'));
 
  app.get('/', function (req, res, next){
-   res.status(200).render('multPosts', {post:postData, dispMod:false});
+   res.status(200).render('main'/*, {post:postData, dispMod:false}*/);
  });
 
  app.get('/posts/:genre', function(req, res, next){
