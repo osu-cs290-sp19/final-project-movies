@@ -120,6 +120,8 @@ article.go-container{
   float: left;
 }
 
+
+/************DICE************/
 .dice {
   display: flex;
   flex-wrap: wrap;
@@ -137,7 +139,7 @@ div.dice{
   margin: 10px;
 }
 
-button {
+#dice-button {
   background-color: rgb(82, 186, 179);
   border-radius: 6px;
   border: none;
@@ -147,6 +149,7 @@ button {
   width: 200px;
   cursor: pointer;
 }
+
 #placeholder {
   height: 100px;
   width: 100px;
@@ -234,8 +237,6 @@ article.genre-container {
   /*border-color: black;*/
   margin: 10px;
 }
-
-
 
 .error-page {
   text-align: center;

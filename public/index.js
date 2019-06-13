@@ -102,7 +102,7 @@ function createNewPost(attributionText, insertText, urlInput){
   newIcon.appendChild(film);
   newPost.appendChild(newIcon);
 
-  var starHtml = '<div class="stars" data-rating=" ">'+
+/*  var starHtml = '<div class="stars" data-rating=" ">'+
   '<span class="star">&nbsp;</span>'+
   '<span class="star">&nbsp;</span>'+
   '<span class="star">&nbsp;</span>'+
@@ -110,7 +110,7 @@ function createNewPost(attributionText, insertText, urlInput){
   '<span class="star">&nbsp;</span>'+
   '</div>'
 
-  var stars = newPost.insertAdjacentHTML('beforeend', starHtml)
+  var stars = newPost.insertAdjacentHTML('beforeend', starHtml)*/
 
   //create the content
   var newContent = document.createElement('div');
@@ -154,6 +154,16 @@ function createNewPost(attributionText, insertText, urlInput){
   newAuth.appendChild(authorText);
 
   newContent.appendChild(newAuth);
+
+  var starHtml = '<div class="stars" data-rating=" ">'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '<span class="star">&nbsp;</span>'+
+  '</div>'
+
+  var stars = newPost.insertAdjacentHTML('beforeend', starHtml)
 
 }
 
@@ -231,7 +241,7 @@ function printNumber(number) {
   }
 }
 
-var button = document.getElementById('button');
+var button = document.getElementById('dice-button');
 
 button.onclick = function() {
   var result = dice.roll();
